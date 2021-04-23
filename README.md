@@ -8,7 +8,7 @@
 <!-- toc -->
 ----
 ### Description
------
+
 Accenture Federal Services manages the global supply chain system for a federal client that tracks the procurement, distribution, maintenance, and retirement of assets. To ensure flexibility, the users were allowed to enter freeform textual information when describing an order. As part of that process, the order would then be assigned an asset class by an expert manually since there was no automated system that would map the order details to asset classes. Over the years, this led to inconsistencies in data and resulted in poor data quality. To ensure data reliability in the future, the client wanted to automate the asset classification process. To address this problem, an Asset Classification Engine was developed which is a Web Application hosted on an AWS EC2 instance. To build this application, a Deep Learning based Long short-term memory (LSTM) model was trained to predict the asset classes based on Order Title and Line Description with an F1-score of 78%. To facilitate continuous learning and improvement, the model can be retrained with revised asset classes. Additionally, to identify the similar asset classes, an algorithm was developed that reduced their number by 92.76%. This algorithm and the model can provide maximum performance with large data and a balanced class distribution. To facilitate scalability and portability, a REST API was developed along with a Graphical User Interface (GUI) for server interactions. The developed system will automate the asset classification and recommendation process to further improve the global supply chain by generating correct asset class labels automatically.
 
 ----
