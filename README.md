@@ -2,6 +2,7 @@
 
 - [Description](#Description)
 - [License](#License)
+- [AuthorInfo](#AuthorInfo)
 
 <!-- toc -->
 
@@ -29,3 +30,9 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+#### AuthorInfo
+Team Centurions - Chaithanya Pramodh Kasula, Varalakshmi Vakkalagadda, Ramya Sri Sonar, Aishwarya Varala
+George Mason University
+DAEN 690
+Spring 2021
