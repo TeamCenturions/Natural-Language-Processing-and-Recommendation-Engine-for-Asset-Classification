@@ -1,6 +1,6 @@
 ## Natural Language Processing and Recommendation Engine For Asset Classification
 
-- [Description] (#Description)
+- [Description](#Description)
 
 <!-- toc -->
 
