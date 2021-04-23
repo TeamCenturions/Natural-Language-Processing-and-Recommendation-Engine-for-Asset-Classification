@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+        <script src="../static/js/app.js"></script>
+<style>
+th, td, p, input {
+            font:14px Verdana;
+}
+table, th, td{
+    border: solid 1px #DDD;
+    border-collapse: collapse;
+    padding: 0;
+    text-align: center;
+}
+th {
+    font-weight:bold;
+}
+.table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table td, .table th {
+    border: 1px solid #ddd;
+
+}
+
+.table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.table tr:hover {
+    background-color: #ddd;
+}
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+::-webkit-scrollbar {
+    display: block;
+}
+.container {
+    overflow: -moz-scrollbars-none;
+}
+.table {
+    margin: auto;
+    width: 60%;
+    padding: 0px;
+}
+* {
+    box-sizing: border-box
+}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  padding:0;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 80.5%;
+    width: 16.667%
+
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: black;
+    display: none;
+    padding: 5%;
+    height: 40%;
+}
+
+
+#About {background-color:white;}
+#Predict {background-color:white;}
+#Continuous Learning {background-color: white;}
+#Important Features {background-color: white;}
+#Performance Metrics {background-color: white;}
+#Algorithms and Models {background-color: white;}
+
+.container-fluid {
+    padding:2%;
+    background-clip: padding-box;
+    text-align: center;
+    color: white
+}
+
+.content {
+    height:20%;
+}
+
+.box {
+  margin: 2% auto;
+  width: 70%;
+  max-width:200%;
+  height: 40%;
+}
+.box .container-1 input{
+   width: 100%;
+}
+
+#team {
+    background: #fff;
+    padding: 60px 0;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1)
+}
+
+.section-header h3 {
+    font-size: 36px;
+    color: #283d50;
+    text-align: center;
+    font-weight: 500;
+    position: relative
+}
+
+.section-header p {
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+    padding-bottom: 60px;
+    color: #556877;
+    width: 50%
+}
+
+.fadeInUp {
+    animation-name: fadeInUp
+}
+
+#team .member {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden
+}
+
+#team .member .member-info {
+    opacity: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: 0.2s
+}
+
+#team .member .member-info-content {
+    margin-top: 50px;
+    transition: margin 0.2s
+}
+
+#team .member:hover .member-info {
+    background: rgba(0, 62, 128, 0.7);
+    opacity: 1;
+    transition: 0.4s
+}
+
+#team .member h4 {
+    font-weight: 700;
+    margin-bottom: 2px;
+    font-size: 18px;
+    color: #fff
+}
+
+#team .member span {
+    font-style: italic;
+    display: block;
+    font-size: 13px;
+    color: #fff
+}
+
+#team .member .social a {
+    transition: none;
+    color: #fff
+}
+</style>
+</head>
+<body>
+
+<div class="container-fluid" style="height: 12%; background-color:darkgreen" >
+  <div class="row content">
+    <div class="col-12">
+        <h4>ASSET CLASSIFICATION AND RECOMMENDATION SYSTEMS USING NATURAL LANGUAGE PROCESSING</h4>
+    </div>
+  </div>
+</div>
+
+<button class="tablink" onclick="openPage('About', this, '#fdbc00')">About</button>
+<button class="tablink" onclick="openPage('Predict', this, '#fdbc00')" id="defaultOpen">Predict</button>
+<button class="tablink" onclick="openPage('Continuous Learning', this, '#fdbc00')">Continuous Learning</button>
+<button class="tablink" id ="btn_imp" onclick="openPage('Important Features', this, '#fdbc00')">Important Features</button>
+<button class="tablink" id ="btn_pm" onclick="openPage('Performance Metrics', this, '#fdbc00')">Performance Metrics</button>
+<button class="tablink" onclick="openPage('Algorithms and Models', this, '#fdbc00')">Algorithms and Models</button>
+
+<div id="About" class="tabcontent">
+    <h4 style="color: darkgreen"><b>Problem Statement</b></h4>
+    <p>Develop a classification model that recommends the asset classes based on the freeform title, description, and other relevant procurement fields to provide data fidelity. The data comprises of procurement, distribution, maintenance, and retirement of the assets for a period of time. The aim is to be develop a classification model to provide an automatic mapping of order details to the Asset class.
+    </p>
+    <h4 style="color: darkgreen"><b>Product Vision - Sample scenarios</b></h4>
+    <h6 style="color: #F9C22E"><b>Scenario #1</b></h6>
+    <p>The classification application can be used by a Supply chain organization to precisely assign classes to the orders based on the textual data provided by the users. These organizations prioritize efficient delivery of the products to the customers. It is a dynamic way to classify the orders as the misclassification rate can be decreased. Unlike the traditional way of manually assigning classes to the orders, this approach automates the process, lowering the human effort involved. Our product is more precise and can be used across similar datasets and is not restricted to only one organization. It needs to be noted that model performance is dependent on the quality and the quantity of the data.</p>
+    <h6 style="color: #F9C22E"><b>Scenario #2</b></h6>
+    <p>The application or investigation process during the development can be used to identify the classes that are closely related to each other. This involves knowledge obtained using the features, patterns, and model. These insights can be used to combine or remove certain classes or suggest new ones. This will be very useful for various stakeholders in the supply chain cycle to improve or modify the asset classes.</p>
+    <h6 style="color: #F9C22E"><b>Scenario #3</b></h6>
+    <p>The product can be used in providing recommendations to the user. Relevant fields are also provided to the user to input content based on the recommended class. This improves the quality of data being generated. Over time, this is expected to increase the fidelity of the data.</p>
+
+    <h4 style="color: darkgreen"><b>Overview</b></h4>
+    <h6 style="color: #F9C22E"><b>Predict</b></h6>
+    <p>The Predict page lists the top five predicted asset classes with confidence values (Probability of the input belonging to that particular class) arranged in descending order.</p>
+    <h6 style="color: #F9C22E"><b>Continuous Learning</b></h6>
+    <p>The Continuous Learning page smoothly updates the prediction model of different tasks and data distributions and able to re-use and retain useful knowledge.</p>
+    <h6 style="color: #F9C22E"><b>Important Features</b></h6>
+    <p>The Important Features page generates a list of 20 important words that are used in making asset class predictions, these are generated by the Random Forest Model. These top 20 words are represented in a bar graph with words on the y-axis and their associated weight on x-axis arranged in the decreasing order of the weight value.</p>
+    <h6 style="color: #F9C22E"><b>Performance Metrics</b></h6>
+    <p>Performance Metrics generates visualizations of the precision, recall, F1 score and Accuracy obtained by the KNN, Decision Trees, Naïve Bayes and Random Forest Models on the Dataset 1, Dataset 2 and Dataset 3. Stacked bar plots are generated for each of the metrics. </p>
+    <h6 style="color: #F9C22E"><b>Algorithms and Models</b></h6>
+    <p>The Algorithms and Models describes all the shallow and deep learning models that are applied on the dataset to perform text classification. This section describes the overview of Naïve Bayes, K Nearest Neighbors, Decision Trees, Random Forest, Multi-Layer Perceptron, Convolutional Neural Network, LSTM and Bi-LSTM models.</p>
+
+    <br>
+    <section id="team">
+    <div class="container">
+        <div class="section-header">
+            <h3 style="color: darkgreen">Team</h3>
+            <p style="color: #F9C22E">Meet our team</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="member"> <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFWn8uHkCd-5Q/profile-displayphoto-shrink_400_400/0/1592861274318?e=1623283200&v=beta&t=QwC_9NR8scZEx6CMbcXd-6flaqKqnG2taKY7_ToelmU" class="img-fluid" alt="">
+                    <div class="member-info">
+                        <div class="member-info-content">
+                            <h4>Chaithanya Pramodh Kasula</h4> <span>Product Owner</span>
+                            <div class="social"> <a href="https://www.linkedin.com/in/chaithanya-pramodh-kasula-814591102/"><i class="fa fa-linkedin"></i></a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                <div class="member"> <img src="https://media-exp1.licdn.com/dms/image/C4E03AQFWxxmx4WW7jw/profile-displayphoto-shrink_800_800/0/1605454602636?e=1623283200&v=beta&t=ihLyOH1lppN90kHB8s5Lda1WqWICevo-Hf__NFcR0Wk" class="img-fluid" alt="">
+                    <div class="member-info">
+                        <div class="member-info-content">
+                            <h4>Varalakshmi Vakkalagadda</h4> <span>Scrum Master</span>
+                            <div class="social"> <a href="https://www.linkedin.com/in/varalakshmi-vakkalagadda-461a8a18b/"><i class="fa fa-linkedin"></i></a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                <div class="member"> <img src="https://media-exp1.licdn.com/dms/image/C4E03AQEyszgBhmx-Ag/profile-displayphoto-shrink_800_800/0/1614278534226?e=1623283200&v=beta&t=tf3mYdw6m8EZ2pUe6iJzwR2iO7Muh_N027X6CTz1GvA" class="img-fluid" alt="">
+                    <div class="member-info">
+                        <div class="member-info-content">
+                            <h4>Ramya Sri Sonar</h4> <span>Developer</span>
+                            <div class="social"> <a href="https://www.linkedin.com/in/rsonar/"><i class="fa fa-linkedin"></i></a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                <div class="member"> <img src="https://media-exp1.licdn.com/dms/image/C5103AQHAZtmLIuzbRA/profile-displayphoto-shrink_800_800/0/1576462857180?e=1623283200&v=beta&t=OtnC4cbCUGFGDiwd5siW_75dGsUBfw-EyOMCOgsMDIg" class="img-fluid" alt="">
+                    <div class="member-info">
+                        <div class="member-info-content">
+                            <h4>Aishwarya Varala</h4> <span>Developer</span>
+                            <div class="social"> <a href="https://www.linkedin.com/in/aishwarya-varala/"><i class="fa fa-linkedin"></i></a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+<div id="Predict" class="tabcontent">
+    <form>
+        <div class="col-sm-5">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default_1">Order Title</span>
+                </div>
+                <input type="text" class="form-control" id="order" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Enter order title" name="orderTitle">
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+            </div>
+                <input type="text" class="form-control" id="desc" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Enter description" name="description">
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <button type="button" class="btn btn-success" id="button-addon1" onclick ="ShowAndHide()">Submit</button>
+        </div>
+    </form>
+
+<div class="box">
+    <br><br>
+      <div class = "table" id="showData" align="center">
+      </div>
+      <br>
+      <div id = "SectionName" style="display:none">
+	      <div class="form-group row">
+		      <label for="input" class="col-sm-4 col-form-label">Would you like to add new asset class?</label>
+		      <div class="col-sm-4">
+			       <input type="text" class="form-control" id="asset_class" placeholder="">
+		      </div>
+		      <button type="button" class="btn btn-success" id="btn_asset">Submit</button>
+	      </div>
+      </div>
+      <div id = "demo"></div>
+
+</div>
+
+
+</div>
+
+<div id ="Continuous Learning" class="tabcontent">
+	<h2 style="color: darkgreen"><b>Continuous Learning</b><h2>
+	<p>Continual Learning (CL) is built on the idea of learning continuously and adaptively about the external world and enabling the autonomous incremental development of ever more complex skills and knowledge.</p>
+	
+	<p>Would you like to train the model with new entries?</p> <button type ="button" class="btn btn-success" id="cont_learning">Yes</button>
+	<div class ="table" id ="showData1" align="center"></div>
+</div>
+
+
+<div id="Important Features" class="tabcontent">
+        <h2><b>Important Features</b></h2>
+    	<div id='feature_imp_div'><!-- Plotly chart will be drawn inside this DIV --></div>
+</div>
+
+<div id="Performance Metrics" class="tabcontent">
+<h2><b>Perfromance Metrics</b></h2>
+<div id='performance_metrics_1'><!-- Plotly chart will be drawn inside this DIV --></div>
+<div id='performance_metrics_2'><!-- Plotly chart will be drawn inside this DIV --></div>
+<div id='performance_metrics_3'><!-- Plotly chart will be drawn inside this DIV --></div>
+<div id='performance_metrics_4'><!-- Plotly chart will be drawn inside this DIV --></div>
+</div>
+
+<div id="Algorithms and Models" class="tabcontent">
+<h2><b>Algorithms and Models</b></h2>
+
+<h3><b>Shallow Learning Algorithms</b></h3>
+
+<h4 style="color: darkgreen"><b>Naïve Bayes</b></h4>
+<p>Naïve Bayes uses the probability calculated from the training set to calculate the posterior probability. As shown in Figure 17, y is the target class and [x1,x2 .. xn] are features provided as the input to the model. Naïve Bayes uses the feature selection score method by calculating the KL-Divergence between training documents and their labels. It tries to identify the difference in the probability distribution of one record from another to create a better performing model on the lesser number of classes. It assumes that the target label is assigned based on conditions between the attributes and that all thefeatures are independent. This assumption might not hold in real life.</p>
+
+<h4 style="color: darkgreen"><b>K-Nearest Neighbors</b></h4>
+<p>KNN is an unsupervised classification algorithm, which classifies the new record based on k training sets and a similarity measure (computed based on the Euclidean distance). It is a simple, fast processing model that does not have a training phase. It is called a lazy learner because it does not train a model based on the training data but only memorizes the dataset. However, it was used in pattern recognition and statistical estimation in the early 1970s.</p>
+
+<h4 style="color: darkgreen"><b>Decision Trees</b></h4>
+<p>A decision tree is a supervised learning model which uses a divide and conquers approach to create a tree with the given data. The correlation between the target class and the features is determined by constructing a tree. It uses various tree pruning methods to reduce noise. The complexity of the tree increases with the increase in the size of the dataset. To decrease the computational costs, fast Decision Trees are introduced which uses two-pronged strategies (preselecting the set of features and training a set of DTs on different subsets of data).</p>
+
+<h4 style="color: darkgreen"><b>Random Forest</b></h4>
+<p>Random Forest is a classification algorithm, that creates a set of decision trees. It uses feature randomness and bagging to create a forest of trees. The result is based on a prediction of each tree in the committee. The main limitation of the random forest is that algorithm is too slow because it tries to build a large number of trees and also tries to overfit the data. Random forest aggregates result from a set of decision trees.</p>
+
+<h3><b>Deep Learning Models</b></h3>
+
+<h4 style="color: darkgreen"><b>Multi-Layer Perceptron(MLP)</b></h4>
+<p>MLP is a feed-forward neural network that connects multiple layers in a directed graph. This approach uses a supervised algorithm called the backpropagation technique for training. It has an input hidden layer with an activation function and output layers. The data is fed into the inpullayer and predictions are made at the output layer.</p>
+<p>The value at each layer is calculated based on the value in the previous layers and by applying the weights. Every node (the computational unit) in the hidden layer uses an activation function to calculate a singular value at the node. The results at the hidden layer are computed, aggregated and the error rate is calculated at the output layer. The error rate at the previous epoch (train) is used to tune the weights of the current epoch and follow the same process until the termination condition is reached.For text classification, it considers the input text as the BOW.</p>
+
+<h4 style="color: darkgreen"><b>Convolutional Neural networks</b></h4>
+<p>In the beginning, CNNs (Convolutional Neural Networks) were introduced for Image classification, but later because of its convolving filters, this concept has performed better on NLP techniques as well. CNN can apply convolutions on multiple chunks of sequence data simultaneously. Like in image representation, the text is represented in vector format to extract features from different angles. The final vector representation of the text is generated from the convolutional and pooling layer. The word vectors created from the text are joined into a matrix and are fed into the convolutional layer. The convolutional layer contains several filters to process these matrices and the results are sent into the pooling layer and combine the results of the pooling layer to obtain the final vector representation of the text. The target class is predicted using this final vector.</p>
+<p>The CNNs have better performance in extracting position-invariant and local features, their processing times are better compared to RNNs. But the model has poor interpretability, and the classification errors cannot be explained because of the non-readability nature of the hidden states. So, Attention nets are introduced to get a better interpretation of the results by employing informational components like encoders, attention layers of a text.</p>
+
+<h4 style="color: darkgreen"><b>Long Short-term Memory (LSTM)</b></h4>
+<p>LSTM contains a gate structure with input, forget, and output gates. These are used to create a cell that remembers the value. The forget gate structure is used to remove the unwanted information and establish a connection among the context words that can be captured by the LSTM classification method. To improve the performance of this sequential classification model, Bi-LSTMs are introduced. This solves the problem by processing the sequence in both directions. Bi-LSTM duplicates the first recurrent layer in the architecture so that there are two layers side-by-side. The input sequence is provided to the first layer and a reversed copy of the sequence to the second layer to extract contextual features from both sides, left-to-right, and right-to-left. As the model is trained numerous times with many features, they are prone to overfitting and it is difficult to apply a dropout algorithm to curb this issue.</p>
+<h4 style="color: darkgreen"><b>Recurrent Neural Networks</b></h4>
+<p>Recurrent Neural Networks is a layer made of memory cells that captures the context of the data, required to make predictions by learning the long-term dependencies. At each element of the sequence, the model also considers the information from the preceding elements and along with the current input. RNN considers the location information of the words to learn historical information, syntax and semantics of text automatically without the feature engineering step.The architecture of the Recurrent Neural Network Model, where word embeddings vector is input to the model. These embedding vectors are passed one by one to the model to capture the sequential information. RNN shares parameters at every epoch, to reduce the computational cost of training a model.</p>
+<p>To reduce the time complexity of the model, semantics are extracted from long texts. These experiments use relative tasks for exploring common features. The computation of this neural network and training is relatively very slow. The weights in the model are calculated using the derivatives and the gradientsare adjusted using these weights. RNN face the vanishing gradient problem because of the smaller gradient values.</p>
+<h4 style="color: darkgreen"><b>Bidirectional Recurrent Neural Networks (BiRNN)</b></h4>
+<p>Bidirectional RNNs are RNNs that offer look-ahead ability as in hidden Markov models by putting two RNNs together. BiRNN runs in two different modes one in the forward mode starting from the first token and the other from the last token running from the back to front. For a more flexible process, the hidden layers in Bidirectional RNNs pass the information in the backward direction. Using Bidirectional RNN, inputs will run in twodifferent ways, one from past to future and the other from future to past.</p>
+<h4 style="color: darkgreen"><b>Gated Recurrent Units (GRU)</b></h4>
+<p>Gated Recurrent Units are improved version of Recurrent Neural Networks that solves the vanishing gradient problem. To decide the information that should be passed to output, GRU uses two different vectorsnamely update and reset gates. The update and reset gates are trained to remember the information from previous epochs and remove the irrelevant information to generate predictions. The update gate alsocalle as long-term memory controls the flow of information into memory and reset gate also called as short-term memory controls the flow out of memory.</p>
+<p>The update gate is powerful for training a model because it eliminates the risk of gradient vanishingproblem by helping the model understand how much of information from previous epochs is necessary to bepassed to the future. The reset gate eliminates the irrelevant information in the epochs. GRU has only one hidden state unlike LSTM that captures both the long term and short term dependencies. The Bidirectional Gated Recurrent Unit (BiGRU) has two GRUs, one takes inputin backward direction and other in forward direction.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+function ShowAndHide() {
+	var x = document.getElementById('SectionName');
+	if (x.style.display == 'none') {
+		 x.style.display = 'block';
+	} else {
+		 x.style.display = 'none';
+	}
+}
+
+
+
+
+
+</script>
+</body>
+</html>
