@@ -1,7 +1,7 @@
 ## Natural Language Processing and Recommendation Engine For Asset Classification
 
 - [Description](#Description)
-- [License](#License)
+- [License](#MIT License)
 
 <!-- toc -->
 
