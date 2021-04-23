@@ -33,7 +33,7 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #### AuthorInfo
-Team Centurions - Chaithanya Pramodh Kasula, Varalakshmi Vakkalagadda, Ramya Sri Sonar, Aishwarya Varala
-George Mason University
-DAEN 690
-Spring 2021
+-Team Centurions - Chaithanya Pramodh Kasula, Varalakshmi Vakkalagadda, Ramya Sri Sonar, Aishwarya Varala
+-George Mason University
+-DAEN 690
+-Spring 2021
