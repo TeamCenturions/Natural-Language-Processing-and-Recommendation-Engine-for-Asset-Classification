@@ -1,4 +1,3 @@
-//var url_name = 'http://0.0.0.0:8080';
 $("document").ready(function(){
     $('#button-addon1').click(function(){
         var order_title = $("#order").val();
