@@ -15,6 +15,7 @@ Accenture Federal Services manages the global supply chain system for a federal 
 
 ----
 ### HowToUse
+Run the LSTM.py in the deeplearning folder to save the model and load the application using app.py in the FlaskApp folder to generate predictions.
 
 ----
 ### License
