@@ -2,7 +2,7 @@
 > Sponsored - Accenture Federal Services
 
 - [Description](#Description)
-- [HowToUse](#How To Use)
+- [HowToUse](#HowToUse)
 - [License](#License)
 - [AuthorInfo](#AuthorInfo)
 
